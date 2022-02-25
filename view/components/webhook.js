@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Webhook = void 0;
 var react_1 = __importDefault(require("react"));
 var react_redux_1 = require("react-redux");
+var config_1 = __importDefault(require("../../config"));
 var Webhook = function () {
     var dispatch = (0, react_redux_1.useDispatch)();
     var socket = (0, react_redux_1.useSelector)(function (state) { return state.socket; });
@@ -19,7 +20,9 @@ var Webhook = function () {
     }
     return react_1.default.createElement("div", { className: "flex gap-12" },
         react_1.default.createElement("div", { className: "flex-1" },
-            "Send your request to http://localhost:4201/webhook/",
+            "Send your request to ",
+            config_1.default.serverUrl,
+            "webhook/",
             socket.id),
         react_1.default.createElement("div", { className: "flex-1" },
             "Incoming Request(s):",
