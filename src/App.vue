@@ -8,14 +8,14 @@
 			</AnimationContainer>
 
 			<Paragraph title="AboutMe()">
-				<TweenText text="Hello, codenamed ChronoAero here!" />
-				<TweenText
+				<CypherText text="Hello, codenamed ChronoAero here!" />
+				<CypherText
 					text="I'm someone with a rather calm and serious nature that helps me to be a better listener. When it comes to projects, it makes me try my best on delivering my work output."
 				/>
-				<TweenText
+				<CypherText
 					text="I might not be that really extroverted one, but I'm open to programming discussions. Since you reach me out this way, this means we should understand each other well."
 				/>
-				<TweenText text="Looking forward to working together with you!" />
+				<CypherText text="Looking forward to working together with you!" />
 			</Paragraph>
 		</DynamicRow>
 	</Section>
@@ -29,15 +29,15 @@
 			</AnimationContainer>
 			<div>
 				<Paragraph title="Experiments()">
-					<TweenText
-						text="I like to experiment around with tools I find interesting. I tried to get something interesting working with them."
+					<CypherText
+						text="I like to experiment around with tools I find interesting. I try to get something interesting working with them."
 					/>
-					<TweenText
+					<CypherText
 						text="Of course, learning takes time, I can't say that I'm an expert on
 						them just yet, but I'm quite sure that I have some pretty decent
 						progress going on here."
 					/>
-					<TweenText
+					<CypherText
 						text="Here are some tools I'm currently experimenting with:"
 					/>
 				</Paragraph>
@@ -75,17 +75,17 @@
 	</Section>
 	<Section class="bg-secondary">
 		<Paragraph title="Projects()">
-			<TweenText
+			<CypherText
 				text="
 				While learning, I've also got some projects worked on. We perhaps can work together on some of them.
 			"
 			/>
-			<TweenText
+			<CypherText
 				text="
 				It can also be a consideration for you to put me as a contributor in your projects, which will be great!
 			"
 			/>
-			<TweenText text="Here are some of them that I can showcase:" />
+			<CypherText text="Here are some of them that I can showcase:" />
 		</Paragraph>
 		<DynamicRow class="flex-wrap">
 			<div v-for="cardData in cardDatas" :key="cardData.title">
@@ -108,8 +108,8 @@
 			</AnimationContainer>
 			<div>
 				<Paragraph title="Contacts()">
-					<TweenText text="This marks the end of this introduction." />
-					<TweenText
+					<CypherText text="This marks the end of this introduction." />
+					<CypherText
 						text="
 						Interested to contact and interact with me further? Sure! here are
 						my contacts:"
@@ -144,7 +144,7 @@ import Parallax from './components/Parallax.vue';
 import Row from './components/Row.vue';
 import DynamicRow from './components/DynamicRow.vue';
 import PixelArt from './components/PixelArt.vue';
-import TweenText from './components/CypherText.vue';
+import CypherText from './components/CypherText.vue';
 import AnimationContainer from './components/AnimationContainer.vue';
 import Logo from './components/Logo.vue';
 import Card from './components/Card.vue';
@@ -173,7 +173,7 @@ export default defineComponent({
 		Logo,
 		Card,
 		Section,
-		TweenText,
+		CypherText,
 		AnimationContainer,
 	},
 	setup() {
