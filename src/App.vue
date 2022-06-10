@@ -8,7 +8,7 @@
 			</AnimationContainer>
 
 			<Paragraph title="AboutMe()">
-				<CypherText text="Hello, codenamed ChronoAero here!" />
+				<CypherText text="Hello, codenamed ChronoAero here! A senior high school student who enjoys programming." />
 				<CypherText
 					text="I'm someone with a rather calm and serious nature that helps me to be a better listener. When it comes to projects, it makes me try my best on delivering my work output."
 				/>
