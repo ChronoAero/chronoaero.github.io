@@ -2,20 +2,20 @@
 	<Section class="bg-primary">
 		<DynamicRow>
 			<AnimationContainer>
-				<PixelArt :src="images.chrono_code" alt="Chrono and a laptop" />
+				<PixelArt :src="images.cover_square" alt="Chrono and a laptop" />
 			</AnimationContainer>
 
 			<Paragraph title="Gravity Outlaw">
 				<CypherText
 					text="First game developed by ChronoAero, please check it out, it's available here:"
 				/>
-				<router-link to="/">
+				<div @click="Redirect('https://chrono.itch.io/gravity-outlaw')">
 					<button
 						class="text-secondary bg-contrast p-2 my-2 rounded-sm hover:bg-subcontrast"
 					>
 						Access Game!
 					</button>
-				</router-link>
+				</div>
 				<CypherText
 					text="If you think there's something to improve, please leave me some feedback in the form below:"
 				/>
@@ -23,14 +23,22 @@
 		</DynamicRow>
 	</Section>
 	<Section class="bg-secondary">
-		<Paragraph title="Feedback()">
-			<CypherText text="This project needs your feedback" />
-			<CypherText
-				text="If you've tried it and still have some spare time, I'd like to know what you think about it."
+		<DynamicRow>
+			<PixelArt
+				:src="images.chrono_packages"
+				alt="Chrono managing version control"
 			/>
-			<CypherText text="Your feedback will help me progress." />
-		</Paragraph>
-		<FeedbackForm purpose="first_game:gravity_outlaw" />
+			<div>
+				<Paragraph title="Feedback()">
+					<CypherText text="This project needs your feedback" />
+					<CypherText
+						text="If you've tried it and still have some spare time, I'd like to know what you think about it."
+					/>
+					<CypherText text="Your feedback will help me progress." />
+				</Paragraph>
+				<FeedbackForm purpose="first_game:gravity_outlaw" />
+			</div>
+		</DynamicRow>
 	</Section>
 </template>
 
@@ -44,7 +52,8 @@ import Paragraph from '../components/Paragraph.vue';
 import PixelArt from '../components/PixelArt.vue';
 import FeedbackForm from '../components/FeedbackForm.vue';
 
-import chrono_code from '../assets/chrono_code.png';
+import cover_square from '../assets/cover_square.png';
+import chrono_packages from '../assets/chrono_packages.png';
 
 export default defineComponent({
 	components: {
@@ -57,11 +66,16 @@ export default defineComponent({
 		FeedbackForm,
 	},
 	setup() {
+		const Redirect = (url: string) => {
+			location.href = url;
+		};
 		const images = {
-			chrono_code,
+			cover_square,
+			chrono_packages,
 		};
 		return {
 			images,
+			Redirect,
 		};
 	},
 });

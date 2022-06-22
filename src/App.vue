@@ -161,6 +161,7 @@ import chrono_code from './assets/chrono_code.png';
 import chrono_git from './assets/chrono_git.png';
 import chrono_contacts from './assets/chrono_contacts.png';
 import chrono_packages from './assets/chrono_packages.png';
+import cover_square from './assets/cover_square.png';
 import vue from './assets/vuejs-original.svg';
 import vite from './assets/vite.svg';
 import typescript from './assets/typescript.png';
@@ -204,7 +205,7 @@ export default defineComponent({
 		const cardDatas: CardData[] = [
 			{
 				title: 'First Game: Gravity Outlaw',
-				src: chrono_packages,
+				src: cover_square,
 				alt: 'gravity outlaw',
 				id: '9fda14d4-9d70-428e-9414-e5af537ae5ce',
 			},
