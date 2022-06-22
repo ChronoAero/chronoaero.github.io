@@ -9,7 +9,7 @@
 				<CypherText
 					text="First game developed by ChronoAero, please check it out, it's available here:"
 				/>
-				<div @click="Redirect('https://chrono.itch.io/gravity-outlaw')">
+				<div @click="Redirect('https://chronoaero.itch.io/gravity-outlaw')">
 					<button
 						class="text-secondary bg-contrast p-2 my-2 rounded-sm hover:bg-subcontrast"
 					>
