@@ -17,16 +17,17 @@
     <p>
       I'll see you later :)
     </p>
-    <hr/>
+    <hr class="my-5"/>
     <p>I will be testing and work on the page down here</p>
     <p>You can check the progress, or simply ignore me hehe :)</p>
+    <br/>
 
     <div
       x-data="{
         query: new URLSearchParams(location.search).get('q')
       }"
     >
-      <h3>Read Query Parameter Demo</h3>
+      <h3 class="text-dark-teal font-bold">Read Query Parameter Demo</h3>
       <p class="mb-2">
         location.search: "<span x-text="location.search"></span>"
       </p>
