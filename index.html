@@ -7,39 +7,46 @@
     <title>ChronoAero's Github Page</title>
   </head>
   <body>
-    <p>
-      Hello, unfortunately, I decided to take down the content of this website temporarily...
-    </p>
-    <p>
-      <div>I plan to work on it during breaks while studying for finals :3 and maybe this summer holiday</div>
-      <div>I was thinking that I should update some information about myself and add more features to this site...</div>
-    </p>
-    <p>
-      I'll see you later :)
-    </p>
-    <hr class="my-5"/>
-    <p>I will be testing and work on the page down here</p>
-    <p>You can check the progress, or simply ignore me hehe :)</p>
-    <br/>
 
-    <div
-      x-data="{
-        query: new URLSearchParams(location.search).get('q')
-      }"
-    >
-      <h3 class="text-dark-teal font-bold">Read Query Parameter Demo</h3>
-      <p class="mb-2">
-        location.search: "<span x-text="location.search"></span>"
+    <section-announcement>
+      <p>
+        Hello, unfortunately, I decided to take down the content of this website temporarily...
       </p>
       <p>
-        Param "q" (from URL): "<span x-text="query"></span>"
+        <div>I plan to work on it during breaks while studying for finals :3 and maybe this summer holiday</div>
+        <div>I was thinking that I should update some information about myself and add more features to this site...</div>
       </p>
-      <p>Some sample links with "q" in the URL:
-        <a href="?q=my search">my search</a>,
-        <a href="?q=another search">another search</a>,
-        <a href="?q=">reset</a>
+      <p>
+        I'll see you later :)
       </p>
-    </div>
+      <hr class="my-5"/>
+      <p>I will be testing and work on the page down here</p>
+      <p>You can check the progress, or simply ignore me hehe :)</p>
+      <br/>
+    </section-announcement>
+
+    <section-routing x-data="router">
+
+      
+      <template x-if="
+        query.length === 0 ||
+        (query.length > 0 && query[0] != 'review')"
+      >
+        <div>Main Page</div>
+      </template>
+
+      <template x-if="query.length > 0">
+
+        <div>
+          
+        </div>
+
+      </template>
+
+
+    </section-routing>
+
     <script type="module" src="/src/main.ts"></script>
+
   </body>
 </html>
