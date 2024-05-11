@@ -5,42 +5,55 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ChronoAero's Github Page</title>
-    <script type="module" crossorigin src="/assets/index-fKrHYJBW.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-RA0t73AF.css">
+    <script type="module" crossorigin src="/assets/index-AleqXAAX.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-8w0mFlY-.css">
   </head>
   <body>
-    <p>
-      Hello, unfortunately, I decided to take down the content of this website temporarily...
-    </p>
-    <p>
-      <div>I plan to work on it during breaks while studying for finals :3 and maybe this summer holiday</div>
-      <div>I was thinking that I should update some information about myself and add more features to this site...</div>
-    </p>
-    <p>
-      I'll see you later :)
-    </p>
-    <hr class="my-5"/>
-    <p>I will be testing and work on the page down here</p>
-    <p>You can check the progress, or simply ignore me hehe :)</p>
-    <br/>
 
-    <div
-      x-data="{
-        query: new URLSearchParams(location.search).get('q')
-      }"
-    >
-      <h3 class="text-dark-teal font-bold">Read Query Parameter Demo</h3>
-      <p class="mb-2">
-        location.search: "<span x-text="location.search"></span>"
+    <section-announcement>
+      <p>
+        Hello, unfortunately, I decided to take down the content of this website temporarily...
       </p>
       <p>
-        Param "q" (from URL): "<span x-text="query"></span>"
+        <div>I plan to work on it during breaks while studying for finals :3 and maybe this summer holiday</div>
+        <div>I was thinking that I should update some information about myself and add more features to this site...</div>
       </p>
-      <p>Some sample links with "q" in the URL:
-        <a href="?q=my search">my search</a>,
-        <a href="?q=another search">another search</a>,
-        <a href="?q=">reset</a>
+      <p>
+        I'll see you later :)
       </p>
-    </div>
+      <hr class="my-5"/>
+      <p>I will be testing and work on the page down here</p>
+      <p>You can check the progress, or simply ignore me hehe :)</p>
+      <br/>
+    </section-announcement>
+
+    <section-routing x-data="router">
+
+      
+      <template x-if="
+        hash.length === 0 ||
+        (hash.length > 0 && hash[0] != '#review')"
+      >
+        <div>Main Page</div>
+      </template>
+
+      <template x-if="hash.length > 0">
+
+        <div>
+          <template x-if=" hash[0] == '#review' ">
+            <div>Review Page</div>
+          </template>
+        </div>
+
+      </template>
+
+      <p>\[\int_{1}^\infty \frac{e^{\cos(x^3)}}{x^4}\]</p>
+
+    </section-routing>
+
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
   </body>
 </html>

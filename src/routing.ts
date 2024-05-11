@@ -1,7 +1,7 @@
 import Alpine from 'alpinejs'
 
-const query : string | null = new URLSearchParams(location.search).get('page');
+const query : string | null = location.hash;
 
 Alpine.data('router', () => ({
-    query : (query==null) ? [] : query.split('.')
+    hash : (query=='') ? [] : query.split('.')
 }))

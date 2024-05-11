@@ -29,24 +29,30 @@
 
       
       <template x-if="
-        query.length === 0 ||
-        (query.length > 0 && query[0] != 'review')"
+        hash.length === 0 ||
+        (hash.length > 0 && hash[0] != '#review')"
       >
         <div>Main Page</div>
       </template>
 
-      <template x-if="query.length > 0">
+      <template x-if="hash.length > 0">
 
         <div>
-          
+          <template x-if=" hash[0] == '#review' ">
+            <div>Review Page</div>
+          </template>
         </div>
 
       </template>
 
+      <p>\[\int_{1}^\infty \frac{e^{\cos(x^3)}}{x^4}\]</p>
 
     </section-routing>
 
+
     <script type="module" src="/src/main.ts"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   </body>
 </html>
