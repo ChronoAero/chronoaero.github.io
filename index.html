@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ChronoAero's Github Page</title>
   </head>
@@ -27,25 +26,72 @@
 
     <section-routing x-data="router">
 
-      
-      <template x-if="
-        hash.length === 0 ||
-        (hash.length > 0 && hash[0] != '#review')"
-      >
-        <div>Main Page</div>
-      </template>
-
       <template x-if="hash.length > 0">
 
         <div>
           <template x-if=" hash[0] == '#review' ">
-            <div>Review Page</div>
+            <div>
+            <template x-if="hash.length > 1">
+              <div>
+                <template x-if="hash[1] == 'math1013'">
+                  <section-review-page>
+                    <div x-init="not_found = false"></div>
+                    <div>Math1013 Review Page</div>
+                  </section-review-page>
+                </template>
+              </div>
+            </template>
+            <template x-if=" hash.length == 1">
+              <section-review-page>
+                <div x-init="not_found = false"></div>
+                Main Review Page
+              </section-review-page>
+            </template>
+            </div>
           </template>
-        </div>
+
+          <template x-if="not_found">
+            <div x-init="window.location.hash = ''"></div>
+          </template>
+
+      </div>
 
       </template>
 
-      <p>\[\int_{1}^\infty \frac{e^{\cos(x^3)}}{x^4} ~dx\]</p>
+      <template x-if="hash.length==0">
+        <section-main-page>
+          <div class="h-10 bg-darker-blue"></div>
+          <div class="h-[400px] bg-dark-blue">
+            <div class="flex h-full justify-center items-center flex-col">
+              <h1 class="text-light-orange font-mono text-3xl font-bold">&lt;ChronoAero's Github Page /&gt;</h1>
+              <h3 class="font-mono text-light-teal text-lg">[Need some quote here I guess]</h3>
+              <h3>\[ \definecolor{light_teal}{rgb}{0.282, 0.576, 0.776} \textcolor{light_teal} {\int_0^\infty \frac{\sin x}{x} ~dx}\]</h3>
+            </div>
+            <div class="bg-darker-blue">
+              <div class="flex p-5">
+                <div class="flex-1 font-mono text-light-teal">
+                  <p>[Need some pics here ig]</p>
+                  <p>\[\textcolor{light_teal}{\oint \nabla \times \vec F}\]</p>
+                </div>
+                <div class="flex-1 font-mono text-light-teal space-x-5">
+                  <p>A long self introduction paragraph I guess? A long self introduction paragraph I guess? A long self introduction paragraph I guess? A long self introduction paragraph I guess? </p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-light-blue">
+              <div class="flex p-5">
+                <div class="flex-1 font-mono text-light-teal">
+                  <p>Description to quick link</p>
+                </div>
+                <div class="flex-1 font-mono text-light-teal space-x-5">
+                  <p>[Link Tree Here]</p>
+                  <p>\[\textcolor{light_teal}{\oint \nabla \times \vec F}\]</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section-main-page>
+      </template>
 
     </section-routing>
 
