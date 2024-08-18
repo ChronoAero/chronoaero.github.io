@@ -27,6 +27,9 @@ export default{
       But anyway, I know that "Chronos" means time by now and as I am indeed intrigued by the concept of time, I decided to keep it.
       I append the second part to make it longer and I want something related to the elements... 
     </p>
+    <p class="text-subcontrast">
+      I even came up with a whole original character for this alter-ego... looking forward to make a better sketch of it.
+    </p>
     <br/>
     <p class="text-subcontrast">
       Anyway, I am currently a year 2 student in the COMP program in HKUST.

@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="p-5">
+    <h1 class="text-symbols">Nothing is here for now</h1>
   </div>
 </template>
 
