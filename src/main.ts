@@ -1,12 +1,11 @@
-import Alpine from 'alpinejs'
-import './style.css'
+import './assets/main.css'
 
-import './routing.ts'
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
 
-declare global {
-    interface Window { Alpine: any; }
-}
+const app = createApp(App)
 
-window.Alpine = Alpine
- 
-Alpine.start()
+app.use(router)
+
+app.mount('#app')
