@@ -14,15 +14,15 @@ function map(s){
 </script>
 
 <template>
-    <div class="min-w-96 sm:flex-col flex-row flex text-center">
+    <div class="min-w-72 md:min-w-96 sm:flex-col flex-row flex text-center bg-slate-800 text-contrast">
       <template v-if="map(route.path)[0] != '-'">
         <RouterLink to="/">
           <p class="m-5">Home</p>
         </RouterLink>
       </template>
-      <div class="bg-cyan-950 p-5 grow">
+      <div class="bg-cyan-950 grow flex flex-col-reverse">
         <template v-if="route.path == '/'">
-            <img src="./images/chrono_code.png" class="w-full max-h-full pixel"/>
+            <img src="./images/chrono_code.png" class="w-full pixel "/>
         </template>
         <template v-if="route.path == '/about'">
             <img src="./images/chrono_packages.png" class="w-full pixel"/>

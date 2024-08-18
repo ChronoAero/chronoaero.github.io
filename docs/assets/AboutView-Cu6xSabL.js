@@ -1,0 +1,1 @@
+import{_ as e,c as s,o,a as t}from"./index-DqhwCmxW.js";const c={},n={class:"p-5"},_=t("h1",{class:"text-symbols"},"Nothing is here for now",-1),a=[_];function r(i,d){return o(),s("div",n,a)}const h=e(c,[["render",r]]);export{h as default};
