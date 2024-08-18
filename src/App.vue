@@ -5,6 +5,13 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
+    <p>Work in progress :3</p>
+    <p>Please do not mind the part below</p>
+    <p>I took down the previous version (again)</p>
+    <p>Please be patient as I learn about this</p>
+
+    <br/>
+
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
